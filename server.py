@@ -10,7 +10,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
   def do_GET(s):
     print "Content-type: text/html"
     print
-    with open('indext.html') as f:
+    with open('index.html') as f:
       print f.read()
 
 
