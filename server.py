@@ -8,10 +8,10 @@ import BaseHTTPServer
  
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
   def do_GET(s):
-    print "Content-type: text/html"
-    print
+    s.wfile.write("Content-type: text/html")
+    s.wfile.write("")
     with open('index.html') as f:
-      print f.read()
+      s.wfile.write(f.read())
 
 
 
